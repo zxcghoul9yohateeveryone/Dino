@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+/* Обёртка проекта */
+.wrapper {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/* Список динозавров */
+.dino-list {
+    list-style: none;
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    align-items: flex-end;
+    position: relative;
+}
+/*Блок с динозавром*/
+.dino-item {
+    flex: 1;
+}
+
+/* Заголовки динозавров*/
+.subtitle {
+    color: floralwhite;
+    visibility: hidden;
+}
+
+/* Блок с картинкой и информацией о динозаврах*/
+.dino-info {
+    width: 100%;
+    height: 90%;
+}
+
+/*Изображение динозавра*/
+.dino-img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+/*Стили блока с динозавром при клике на него мышке*/
+.dino-item.active{
+    width: 100%;
+    height: 100%;
+}
+
+.dino-item.hidden{
+    width: 0;
+    flex: 0;
+}
+.tiranozavr-img {}
+
+/* Описание динозавра */
+.dino-desc {
+    position: absolute;
+    width: 100%; 
+}
+
+.stegozavr-img {}
+
+.triceratops-img {}
+
+/*Стиль картинку у активированного динозавра*/
+.dino-item.active .dino-img {
+    width: 100%;
+    height: 80%;
+    align-self: flex-start;
+}
+
+/* Описание динозавра у активного элемента */
+.dino-item.active .dino-desc {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Цвет текста */
+    color: black;
+    /* Ширина блока */
+    bottom: 0;
+    left: 0;
+    height: auto;
+}
+/* Показать заголовок блока активного динозавра */
+.dino-item.active .subtitle {
+    visibility: visible;
+}
